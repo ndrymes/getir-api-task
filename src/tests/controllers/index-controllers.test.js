@@ -28,7 +28,7 @@ describe('main Controller', () => {
       expect(res.status).toHaveBeenCalledWith(200);
       expect(res.send).toHaveBeenCalledWith({
         code: 0,
-        data: mockData.sampleResponseBody,
+        records: mockData.sampleResponseBody,
         message: 'SUCCESS',
       });
     });
@@ -45,7 +45,7 @@ describe('main Controller', () => {
     expect(res.status).toHaveBeenCalledWith(400);
     expect(res.send).toHaveBeenCalledWith({
       code: 400,
-      data: [],
+      records: [],
       message: 'Bad request, Add all required fields, startDate, endDate, minCount, maxCount',
     });
   });
@@ -61,7 +61,7 @@ describe('main Controller', () => {
     expect(res.status).toHaveBeenCalledWith(400);
     expect(res.send).toHaveBeenCalledWith({
       code: 400,
-      data: [],
+      records: [],
       message: 'Bad request, Add all required fields, startDate, endDate, minCount, maxCount',
     });
   });
