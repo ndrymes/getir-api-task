@@ -4,6 +4,8 @@ const compression = require('compression');
 const bodyParser = require('body-parser');
 const helmet = require('helmet');
 
+const authRoute = require('./routes/index');
+const serviceLocator = require('./config/di');
 const database = require('./db/mongoose');
 // initialize databse connection
 database.connect();
@@ -21,4 +23,6 @@ app.use(helmet());
 // Compress response bodies for all requesst that passes through it
 app.use(compression());
 
+// setup Routing and Error Event Handling
+authRoute.setup(app, serviceLocator);
 module.exports = app;
