@@ -3,9 +3,6 @@
 const mongoose = require('mongoose');
 const { MongoMemoryServer } = require('mongodb-memory-server');
 const config = require('../config/config');
-const serviceLocator = require('../config/di');
-
-const logger = serviceLocator.get('logger');
 
 const databaseConnectionOptions = {
   useNewUrlParser: true,
@@ -45,7 +42,6 @@ const connect = async () => {
     if (err) {
       process.exit(1);
     }
-    logger.info('db connected.');
   });
   // debug('Database connection successful');
 };
