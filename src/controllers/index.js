@@ -34,6 +34,7 @@ class MainController {
       if (error.name === 'ValidationError') {
         return this.handleBadRequest(res, error);
       }
+      console.log({error});
       return this.handleInternalServerError(res, error);
     }
   }
