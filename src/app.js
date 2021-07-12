@@ -11,9 +11,9 @@ app.use(
     extended: false,
   }),
 );
-//Enables CORS Request
+// Enables CORS Request
 app.use(cors());
-//Secure your  app by setting various HTTP headers
+// Secure your  app by setting various HTTP headers
 app.use(helmet());
 // Compress response bodies for all requesst that passes through it
 app.use(compression());
