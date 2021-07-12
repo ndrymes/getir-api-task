@@ -13,7 +13,7 @@ class Response {
       .send({
         code: this.code,
         message: this.message,
-        data: this.data,
+        records: this.data,
       });
   }
 }

@@ -11,7 +11,7 @@ const database = require('./db/mongoose');
 const logger = serviceLocator.get('logger');
 // initialize databse connection
 database.connect().then(() => {
-  logger.info('db connected.');
+  console.log('db connected.');
 }).catch((error) => {
   logger.error(error);
 });
