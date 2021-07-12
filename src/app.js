@@ -4,6 +4,9 @@ const compression = require('compression');
 const bodyParser = require('body-parser');
 const helmet = require('helmet');
 
+const database = require('./db/mongoose');
+// initialize databse connection
+database.connect();
 const app = express();
 app.use(bodyParser.json()); // support application/json type post data
 app.use(
