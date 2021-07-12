@@ -5,7 +5,7 @@ const config = {
   appName,
   version: 'v1',
   db: {
-    url: process.env.MONGOOSE_URL,
+    url: process.env.MONGODB_URL,
   },
   logging: {
     level: process.env.LOG_LEVEL || 'info',
