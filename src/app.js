@@ -7,8 +7,14 @@ const helmet = require('helmet');
 const authRoute = require('./routes/index');
 const serviceLocator = require('./config/di');
 const database = require('./db/mongoose');
+
+const logger = serviceLocator.get('logger');
 // initialize databse connection
-database.connect();
+database.connect().then(() => {
+  logger.info('db connected.');
+}).catch((error) => {
+  logger.error(error);
+});
 const app = express();
 app.use(bodyParser.json()); // support application/json type post data
 app.use(
