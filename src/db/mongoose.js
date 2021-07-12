@@ -1,3 +1,4 @@
+/* eslint-disable consistent-return */
 /* eslint-disable no-async-promise-executor */
 const mongoose = require('mongoose');
 const { MongoMemoryServer } = require('mongodb-memory-server');
@@ -54,4 +55,3 @@ mongoose.connection
 module.exports = {
   connect,
 };
-
