@@ -8,9 +8,10 @@ Libaries : Eslint, jest, mongoose
 ```
 **Install all dependencies**
 ```
-- Download or clone
+- Download or clone the repositories
 - Open terminal inside the root directory of clone folder
 - npm install
+- add .env at root directory  and start the application
 ```
 
 **Start the application**
@@ -29,13 +30,23 @@ npm run dev
 **Run linting**
 ```
 npm run lint
-
-| Http Method | POST                                        |
-| Base Url    | https://getir-tasks.herokuapp.com |
-| Path        | /v1/records 
-                                |
-Sample request body
 ```
+**Details**
+```
+Http Method: Post
+base Url:https://getir-tasks.herokuapp.com
+Path: /v1/records
+```
+| Status Code | Description                                 |
+| ----------- | ------------------------------------------- |
+| 0           | Operation was successful                    |
+| 400       | Invalid request payload provided            |
+| 500       | Internal Server error|
+
+```
+
+```
+### Sample request body
     {
        "startDate": "2016-01-26",
        "endDate": "2018-02-02",
@@ -44,9 +55,9 @@ Sample request body
     }
 ```
 
-### Sample Success Response Bodys
-
 ```
+### Sample Success Response Body
+
     {
         "code": 0,
         "msg": "Success",
@@ -71,16 +82,12 @@ For more documentation on endpoints, please kindly check https://documenter.getp
 
  Just as provided in sample.env
 
-| Status Code | Description                                 |
-| ----------- | ------------------------------------------- |
-| 0           | Operation was successful                    |
-| 400       | Invalid request payload provided            |
-| 500       | Internal Server error|
-
 ``
 PORT=''
+MONGODB_URL=''
 ``
+#
 The app is hosted on heroku. The base url is <a href="https://getir-tasks.herokuapp.com">https://getir-tasks.herokuapp.com</a>.
-where PORT
+
 ##  AUTHOR
 Oluwole
