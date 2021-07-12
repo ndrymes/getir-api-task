@@ -17,7 +17,7 @@ describe('Records Controller', () => {
   });
   describe('get Records', () => {
     it('It should test if base url is healthy', async () => {
-      const response = await request(server).get(`/${VERSION}`);
+      const response = await request(server).get('/');
       expect(response.body).toStrictEqual({ message: 'Welcome to the Test API Service' });
       expect(response.statusCode).toBe(200);
     });
